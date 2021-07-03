@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Centre Hospitalier Regional Amadou Sakhir Mbaye/Louga</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+
+<!-- Favicons -->
+<link th:href="@{/assets/img/ll.jpg}" rel="icon">
+<link th:href="@{/assets/img/apple-touch-icon.png}"
+	rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link th:href="@{/assets/vendor/animate.css/animate.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+<link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/fontawesome-free/css/all.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}"
+	rel="stylesheet">
+
+
+
+
+<!-- Template Main CSS File -->
+<link th:href="@{/assets/css/style.css}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+	<!-- ======= Top Bar ======= -->
+	<!-- ======= Top Bar ======= -->
+	<div id="topbar" class="d-flex align-items-center fixed-top">
+		<div
+			class="container d-flex align-items-center justify-content-center justify-content-md-between">
+			<div class="align-items-center d-none d-md-flex">
+				<i class="bi bi-clock"></i> Disponible 24h/24, 7j/7
+			</div>
+			<div class="d-flex align-items-center">
+				<i class="bi bi-phone"></i> Rejoignez nous au 33 967 09 29
+			</div>
+		</div>
+	</div>
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top">
+		<div class="container d-flex text-center ">
+
+			<a href="#" class="logo me-auto"><img
+				th:src="@{/assets/img/logo1.png}" alt=""></a>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <h1 class="logo me-auto"><a th:href="index.html">Medicio</a></h1> -->
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+				<ul>
+					<li><a class="nav-link scrollto " href="#hero">Accueil</a></li>
+					<li><a class="nav-link scrollto" href="#about">A propos</a></li>
+					<li><a class="nav-link scrollto" href="#services">Prestations
+							de Services</a></li>
+					<li><a class="nav-link scrollto" href="#departments">Départements</a></li>
+					<li><a class="nav-link scrollto" href="#doctors">Medecins</a></li>
+					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+			<!-- .navbar -->
+
+			<a href="#appointment" class="appointment-btn scrollto"><span
+				class="d-none d-md-inline">Prenez</span> un RV</a>
+
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<!-- ======= Hero Section ======= -->
+	<section id="hero">
+		<div id="heroCarousel" data-bs-interval="5000"
+			class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+			<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+			<div class="carousel-inner" role="listbox">
+
+				<!-- Slide 1 -->
+				<div class="carousel-item active"
+					style="background: url(/assets/img/slide/slide1.jpg)">
+					<div class="container">
+						<h2>
+							Bienvenue chez <span>CHRASM/Louga</span>
+						</h2>
+						<p>LE CENTRE HOSPITALIER AHMADOU SAKHIR MBAYE EST LE NIVEAU DE
+							RÉFÉRENCE SANITAIRE LE PLUS ÉLEVÉ DE LA RÉGION DE LOUGA AU
+							SÉNÉGAL.</p>
+						<a href="#about" class="btn-get-started scrollto">A SAVOIR</a>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="carousel-item"
+					style="background: url(/assets/img/slide/solide2.jpg)">
+					<div class="container">
+						<h2>
+							Bienvenue chez <span>CHRASM/Louga</span>
+						</h2>
+						<p>LE CENTRE HOSPITALIER AHMADOU SAKHIR MBAYE EST LE NIVEAU DE
+							RÉFÉRENCE SANITAIRE LE PLUS ÉLEVÉ DE LA RÉGION DE LOUGA AU
+							SÉNÉGAL.</p>
+						<a href="#about" class="btn-get-started scrollto">A SAVOIR</a>
+					</div>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="carousel-item"
+					style="background: url(/assets/img/slide/slide3.jpg)">
+					<div class="container">
+						<h2>
+							Bienvenue chez <span>CHRASM/Louga</span>
+						</h2>
+						<p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea
+							ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
+							mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+							repellendus deleniti vel.</p>
+						<a href="#about" class="btn-get-started scrollto">A SAVOIR</a>
+					</div>
+				</div>
+
+			</div>
+
+			<a class="carousel-control-prev" href="#heroCarousel" role="button"
+				data-bs-slide="prev"> <span
+				class="carousel-control-prev-icon bi bi-chevron-left"
+				aria-hidden="true"></span>
+			</a> <a class="carousel-control-next" href="#heroCarousel" role="button"
+				data-bs-slide="next"> <span
+				class="carousel-control-next-icon bi bi-chevron-right"
+				aria-hidden="true"></span>
+			</a>
+
+		</div>
+	</section>
+	<!-- End Hero -->
+	<main id="main">
+
+		<!-- ======= Featured Services Section ======= -->
+
+		<!-- End Featured Services Section -->
+
+		<!-- ======= Cta Section ======= -->
+		<section id="cta" class="cta">
+			<div class="container" data-aos="zoom-in">
+
+				<div class="text-center">
+					<h3>Dans une urgence? Besoin d'aide maintenant?</h3>
+					<p>Les urgences sont le service hospitalier chargé d'accueillir
+						et de prendre en charge les malades et les blessés qui se
+						présentent d'eux-mêmes ou sont amenés par les services de secours
+						(pompiers...).</p>
+					<a class="cta-btn scrollto" href="#appointment">Prendre
+						rendez-vous</a>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Cta Section -->
+
+		<!-- ======= About Us Section ======= -->
+		<section id="about" class="about">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>A Propos</h2>
+					<p>L'histoire se déroule dans un pays sous développé, dans une
+						région nouvellement créée: LOUGA. La population avait des
+						difficultés pour accéder aux soins hospitaliers. Un fils de la
+						région ,un visionnaire nommé El Hadji Djily Mbaye décida
+						d'améliorer l'accessibilité des populations aux soins de santé. Il
+						construisit en 1983 un hôpital qui en l'an 2000 devint un
+						établissement public de santé . Aujourd'hui le CHR Amadou Sakhir
+						Mbaye de Louga fait travailler en son sein plus de 300 personnes
+						et assure des soins de santé à la population de la région.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6" data-aos="fade-right">
+						<img th:src="@{/assets/img/about1.jpg}"
+							class="img-fluid text-	center" alt="">
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End About Us Section -->
+
+		<!-- ======= Counts Section ======= -->
+		<section id="counts" class="counts">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row no-gutters">
+
+					<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+						<div class="count-box">
+							<i class="fas fa-user-md"></i> <span data-purecounter-start="0"
+								data-purecounter-end="85" data-purecounter-duration="1"
+								class="purecounter"></span>
+
+							<p>
+								<strong>Medecins</strong> sont dans notre structure
+							</p>
+
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+						<div class="count-box">
+							<i class="far fa-hospital"></i> <span data-purecounter-start="0"
+								data-purecounter-end="26" data-purecounter-duration="1"
+								class="purecounter"></span>
+							<p>
+								<strong>Departements</strong> compte notre structure
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+						<div class="count-box">
+							<i class="fas fa-flask"></i> <span data-purecounter-start="0"
+								data-purecounter-end="14" data-purecounter-duration="1"
+								class="purecounter"></span>
+							<p>
+								<strong>Laboratoires de recherche</strong> y trouvent
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+						<div class="count-box">
+							<i class="fas fa-award"></i> <span data-purecounter-start="0"
+								data-purecounter-end="150" data-purecounter-duration="1"
+								class="purecounter"></span>
+							<p>
+								<strong>Awards</strong> rerum asperiores dolor molestiae
+								doloribu
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Counts Section -->
+
+		<!-- ======= Features Section ======= -->
+		
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services services">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Services</h2>
+					<p>Outre les services administratifs, on retrouve des services
+						de spécialité selon les spécificités de centre</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="100">
+						<div class="icon">
+							<i class="fas fa-heartbeat"></i>
+						</div>
+						<h4 class="title">
+							<a href="">Médecine générale</a>
+						</h4>
+						<p class="description">Le médecin généraliste, aussi appelé
+							médecin omnipraticien ou médecin de famille, est donc souvent
+							consulté pour diagnostiquer les symptômes avant de traiter la
+							maladie ou de référer le patient à un autre médecin spécialiste.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="200">
+						<div class="icon">
+							<i class="fas fa-pills"></i>
+						</div>
+						<h4 class="title">
+							<a href="">Immunologie</a>
+						</h4>
+						<p class="description">L'immunologie est la branche de la
+							biologie qui s'occupe de l'étude du système immunitaire. Apparu
+							très tôt au cours de l'évolution, ce système a évolué pour
+							distinguer le non-soi du soi.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="300">
+						<div class="icon">
+							<i class="fas fa-hospital-user"></i>
+						</div>
+						<h4 class="title">
+							<a href="">Radiologie</a>
+						</h4>
+						<p class="description">La radiologie médicale désigne
+							l’ensemble des techniques diagnostiques et thérapeutiques, par
+							rayons X et autres rayonnements.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="100">
+						<div class="icon">
+							<i class="fas fa-dna"></i>
+						</div>
+						<h4 class="title">
+							<a href="">chirurgie</a>
+						</h4>
+						<p class="description">La chirurgie est la partie de la
+							thérapeutique qui implique des opérations internes ou des
+							manœuvres externes sur les tissus, notamment par incision et
+							suture. Un chirurgien est un professionnel de la santé habilité à
+							pratiquer la chirurgie.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="200">
+						<div class="icon">
+							<i class="fas fa-wheelchair"></i>
+						</div>
+						<h4 class="title">
+							<a href="">pneumologie</a>
+						</h4>
+						<p class="description">La pneumologie est la branche de la
+							médecine s'intéressant aux pathologies respiratoires.</p>
+					</div>
+					<div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in"
+						data-aos-delay="300">
+						<div class="icon">
+							<i class="fas fa-notes-medical"></i>
+						</div>
+						<h4 class="title">
+							<a href="">cardiologie</a>
+						</h4>
+						<p class="description">La cardiologie est une branche de la
+							médecine qui traite des troubles du cœur ainsi que de certaines
+							parties du système circulatoire.</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Services Section -->
+
+		<!-- ======= Appointment Section ======= -->
+		<section id="appointment" class="appointment section-bg">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>PRENDRE RENDEZ-VOUS</h2>
+					<p>Pour faciliter vos démarches, LE CENTRE HOSPITALIER AHMADOU
+						SAKHIR MBAYE vous propose de prendre rendez-vous en ligne pour
+						certains départements listés ci-dessous.Pour les autres
+						spécialités, la prise de rendez-vous se fait par téléphone en
+						appelant le standard au 33 967 09 29 , sur place ou sur le site.</p>
+				</div>
+
+				<div class=" col-12  py-3 ">
+
+					<form th:action="@{/patient/save}" method="post" role="form"
+						class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+						<div class="row">
+							<div class="col-md-4 form-group">
+								<input type="text" name="nom" class="form-control"
+									autocomplete="off" placeholder="Votre nom" required>
+							</div>
+							<div class="col-md-4 form-group">
+								<input type="text" name="prenom" class="form-control"
+									autocomplete="off" placeholder="Votre prenom" required>
+							</div>
+							<div class="col-md-4 form-group mt-3 mt-md-0">
+								<input type="email" name="email" class="form-control"
+									autocomplete="off" placeholder="Votre Email" required>
+							</div>
+							<div class="col-md-4 form-group">
+								<input type="text" name="maladie" class="form-control"
+									autocomplete="off" placeholder="Maladie">
+							</div>
+							<div class="col-md-4 form-group">
+								<input type="text" name="groupeSanguin" class="form-control"
+									autocomplete="off" placeholder="Groupe sanguin">
+							</div>
+							<div class="col-md-4 form-group">
+								<input type="text" name="adresse" class="form-control"
+									autocomplete="off" placeholder="Adresse de domicile" required>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-4 form-group mt-3 mt-md-0">
+								<input type="tel" class="form-control" name="telephone"
+									autocomplete="off" placeholder="Numéro téléphone" required>
+							</div>
+							<div class="col-md-4 form-group mt-3 mt-md-0">
+								<input type="date" name="date" autocomplete="off"
+									class="form-control datepicker" id="date"
+									placeholder="Appointment Date" required>
+							</div>
+							<div class="col-md-4 form-group mt-3 mt-md-0">
+								<select name="department" id="department" class="form-select">
+									<option value="">Selectionner un département</option>
+									<option value="médecinegénérale">médecine générale</option>
+									<option value="immunologie">immunologie</option>
+									<option value="radiologie">radiologie</option>
+									<option value="chirurgie">chirurgie</option>
+									<option value="neurologie">neurologie</option>
+									<option value="pneumologie">pneumologie</option>
+									<option value="cardiologie">cardiologie</option>
+									<option value="odontologie.">odontologie</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div class="my-3">
+							<div class="loading">Loading</div>
+							<div class="error-message"></div>
+							<div class="sent-message">Your appointment request has been
+								sent successfully. Thank you!</div>
+						</div>
+						<div class="text-center">
+							<button type="submit">Prendre un RV</button>
+						</div>
+					</form>
+
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Appointment Section -->
+
+		<!-- ======= Departments Section ======= -->
+		<section id="departments" class="departments">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Departements</h2>
+					<p></p>
+				</div>
+
+				<div class="row" data-aos="fade-up" data-aos-delay="100">
+					<div class="col-lg-4 mb-5 mb-lg-0">
+						<ul class="nav nav-tabs flex-column">
+							<li class="nav-item"><a class="nav-link active show"
+								data-bs-toggle="tab" data-bs-target="#tab-1">
+									<h4>Cardiologie</h4>
+									<p>Le cardiologue peut être amené à intervenir en urgence
+										notamment en cas d'infarctus du myocarde.</p>
+							</a></li>
+							<li class="nav-item mt-2"><a class="nav-link"
+								data-bs-toggle="tab" data-bs-target="#tab-2">
+									<h4>Neurologie</h4>
+									<p>Branche de la médecine qui étudie le système nerveux et
+										ses maladies.</p>
+							</a></li>
+							<li class="nav-item mt-2"><a class="nav-link"
+								data-bs-toggle="tab" data-bs-target="#tab-3">
+									<h4>Hepatologie</h4>
+									<p>L'hépatologie est la branche de la médecine qui
+										s'intéresse à l’étude du foie (hépar) sur un plan anatomique,
+										physiologique et pathologique. Le spécialiste, l'hépatologue
+										est aussi gastro entérologue .</p>
+							</a></li>
+							<li class="nav-item mt-2"><a class="nav-link"
+								data-bs-toggle="tab" data-bs-target="#tab-4">
+									<h4>Pediatrie</h4>
+									<p>La pédiatrie est une spécialité médicale qui se consacre
+										à l'enfant, depuis la vie intra-utérine (en lien avec
+										l'obstétrique ) jusqu'à la fin de l'adolescence.</p>
+							</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-8">
+						<div class="tab-content">
+							<div class="tab-pane active show" id="tab-1">
+								<h3>Cardiologie</h3>
+								<p class="font-italic">La cardiologie s'intéresse à
+									l'appareil cardiovasculaire, c'est-à-dire au coeur et aux
+									vaisseaux (artères et veines), à la prévention ainsi qu'au
+									traitement des anomalies et des maladies qui l'affectent :
+									hypertension artérielle, insuffisance cardiaque, troubles du
+									rythme cardiaque, angine de poitrine, athérosclérose …</p>
+								<img th:src="@{/assets/img/departments-1.jpg}" alt=""
+									class="img-fluid">
+								<p>Hormis en cas d'urgence, c'est au médecin traitant
+									d'orienter son patient vers un cardiologue s'il le juge
+									nécessaire. En cardiologie, la prévention est primordiale, a
+									fortiori pour les personnes à risques : diabétiques, patients
+									en surpoids, hypertendus, hypercholestérolémiques, fumeurs,
+									etc. Aujourd’hui, les maladies cardiovasculaires restent la
+									première cause de décès en France chez les femmes devant les
+									tumeurs.</p>
+							</div>
+							<div class="tab-pane" id="tab-2">
+								<h3>Neurologie</h3>
+								<p class="font-italic">Le cerveau est le moteur de
+									l'organisme et contrôle de nombreuses fonctions vitales. Le
+									neurologue est chargé de soigner les maladies associées à des
+									problèmes cérébraux. On aperçoit ici les différentes régions du
+									cerveau.</p>
+								<img th:src="@{/assets/img/departments-2.jpg}" alt=""
+									class="img-fluid">
+								<p>Le neurologue traite ainsi de très nombreuses
+									pathologies, qu'elles soient physiologiques (cancer du cerveau,
+									problème vasculaire, pathologies neuromusculaires, etc.) ou
+									infectieuses (méningite, encéphalite, etc.). Il s'occupe
+									également des maladies neurodégénératives, comme la maladie
+									d'Alzheimer ou de Parkinson. Il est donc amené à soigner des
+									patients de tous les âges.</p>
+							</div>
+							<div class="tab-pane" id="tab-3">
+								<h3>Hepatologie</h3>
+								<p class="font-italic">Les explorations hépatiques se font
+									essentiellement par prise de sang mais aussi l’imagerie qui
+									comprend l’échographie, le scanner et l’IRM.</p>
+								<img th:src="@{/assets/img/departments-3.jpg}" alt=""
+									class="img-fluid">
+								<p>Le foie est un organe noble, indispensable à la vie. Il
+									constitue une réserve en sucre, intervient dans le métabolisme
+									des graisses et des protéines, participe à l'élimination de
+									certains déchets et à la production de bile. Les fonctions
+									hépatiques sont essentielles la survie de l'organisme</p>
+							</div>
+							<div class="tab-pane" id="tab-4">
+								<h3>Pediatrie</h3>
+								<p class="font-italic">En s’intéressant à l’alimentation et
+									en suivant la croissance et l’évolution de l’enfant, la
+									pédiatrie exerce un rôle important de prévention et de
+									détection, et s’attache à diagnostiquer et à traiter les
+									pathologies qui peuvent affecter sa santé.</p>
+								<img th:src="@{/assets/img/departments-4.jpg}" alt=""
+									class="img-fluid">
+								<p>Aujourd’hui, le médecin pédiatre, qui travaille souvent
+									en réseau avec d’autres professionnels de santé, de l’éducation
+									et des travailleurs sociaux, s’impose comme un acteur clé de
+									son développement.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Departments Section -->
+
+
+
+		<!-- ======= Doctors Section ======= -->
+		<section id="doctors" class="doctors section-bg">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Medecins</h2>
+					<p>Nos médecins ont prêté le serment d'Hippocrate, qui leur
+						engagent à toujours conserver une éthique de travail et à
+						respecter strictement les obligations déontologiques. Au cours de
+						leur carriére, nos médecins sont en particulier se tenir informé
+						des derniers progrés de la médecine et de la recherche. voici
+						quelques uns.</p>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+						<div class="member" data-aos="fade-up" data-aos-delay="100">
+							<div class="member-img">
+								<img th:src="@{/assets/img/doctors/doctors-1.jpg}"
+									class="img-fluid" alt="">
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-info">
+								<h4>Walter White</h4>
+								<span>Chief Medical Officer</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+						<div class="member" data-aos="fade-up" data-aos-delay="200">
+							<div class="member-img">
+								<img th:src="@{/assets/img/doctors/doctors-2.jpg}"
+									class="img-fluid" alt="">
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-info">
+								<h4>Sarah Jhonson</h4>
+								<span>Anesthesiologist</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+						<div class="member" data-aos="fade-up" data-aos-delay="300">
+							<div class="member-img">
+								<img th:src="@{/assets/img/doctors/doctors-3.jpg}"
+									class="img-fluid" alt="">
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-info">
+								<h4>William Anderson</h4>
+								<span>Cardiology</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+						<div class="member" data-aos="fade-up" data-aos-delay="400">
+							<div class="member-img">
+								<img th:src="@{/assets/img/doctors/doctors-4.jpg}"
+									class="img-fluid" alt="">
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+							<div class="member-info">
+								<h4>Amanda Jepson</h4>
+								<span>Neurosurgeon</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Doctors Section -->
+
+
+		<!-- ======= Gallery Section ======= -->
+		<section id="gallery" class="gallery">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>Galerie</h2>
+					<p>Voici quelques images de nos différentes équipements</p>
+				</div>
+
+				<div class="gallery-slider swiper-container">
+					<div class="swiper-wrapper align-items-center">
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-1.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-1.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-2.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-2.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-3.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-3.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-4.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-4.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-5.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-5.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-6.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-6.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-7.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-7.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a class="gallery-lightbox"
+								th:href="@{/assets/img/gallery/gallery-8.jpg}"><img
+								th:src="@{/assets/img/gallery/gallery-8.jpg}" class="img-fluid"
+								alt=""></a>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Gallery Section -->
+
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Contact</h2>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="container">
+
+				<div class="row mt-5">
+
+					<div class="col-lg-6">
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="info-box">
+									<i class="bx bx-map"></i>
+									<h3>Notre Adresse</h3>
+									<p>
+										Grand-Louga <br> BP 302<br> Louga - Sénégal
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="info-box mt-4">
+									<i class="bx bx-envelope"></i>
+									<h3>Email</h3>
+									<p>chrasmlouga@gmail.com</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="info-box mt-4">
+									<i class="bx bx-phone-call"></i>
+									<h3>Appelez-nous au</h3>
+									<p>33 967 29 09</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-6">
+						<form th:action="@{/contact/save}" method="post" role="form"
+							class="php-email-form">
+							<div class="row">
+								<div class="col form-group">
+									<input type="text" name="nom" class="form-control" id="name"
+										placeholder="Votre Nom" required>
+								</div>
+								<div class="col form-group mt-3">
+									<input type="email" class="form-control" name="email"
+										id="email" placeholder="Votre Email" required>
+								</div>
+							</div>
+							<div class="form-group mt-3">
+								<input type="text" class="form-control" name="object"
+									id="subject" placeholder="Objet du message" required>
+							</div>
+							<div class="form-group mt-3">
+								<textarea class="form-control" name="message" rows="5"
+									placeholder="Message" required></textarea>
+							</div>
+							<div class="my-3">
+								<div class="loading">Loading</div>
+								<div class="error-message"></div>
+								<div class="sent-message">Votre message a été bien envoyé.
+									Merci!</div>
+							</div>
+							<div class="text-center">
+								<button
+									onclick=" alert('Taper sur Ok si voulez envoyer votre message');"
+									type="submit">Envoyer</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Contact Section -->
+
+	</main>
+	<!-- End #main -->
+
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row text-center">
+
+					<div class="col-lg-12 col-md-12">
+						<div class="footer-info">
+							<h3>CHRASM/Louga</h3>
+							<p>
+								Grand-Louga <br> BP 302<br>Louga - Sénégal<br> <br>
+								<strong>Téléphone:</strong> 33 967 29 09<br> <strong>Email:</strong>
+								chrasmlouga@gmail.com<br>
+							</p>
+							<div class="social-links mt-3">
+								<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a
+									href="https://web.facebook.com/chrasml" class="facebook"><i
+									class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i
+									class="bx bxl-instagram"></i></a> <a href="#" class="google-plus"><i
+									class="bx bxl-skype"></i></a> <a href="#" class="linkedin"><i
+									class="bx bxl-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>CHRASM/Louga</span></strong>. Tous
+				les droits sont réservés
+			</div>
+			<div class="credits">
+				<!-- All the links in the footer should remain intact. -->
+				<!-- You can delete the links only if you purchased the pro version. -->
+				<!-- Licensing information: https://bootstrapmade.com/license/ -->
+				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
+				Conçu par <a href="">Khalipha GUEYE</a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<div id="preloader">
+		<a href="#"
+			class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+		<!-- Vendor JS Files -->
+		<script th:src="@{/assets/vendor/aos/aos.js}"></script>
+		<script
+			th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<script th:src="@{/assets/vendor/glightbox/js/glightbox.min.js}"></script>
+
+		<script th:src="@{/assets/vendor/purecounter/purecounter.js}"></script>
+		<script th:src="@{/assets/vendor/swiper/swiper-bundle.min.js}"></script>
+
+		<!-- Template Main JS File -->
+		<script th:src="@{/assets/js/main.js}"></script>
+	</div>
+</body>
+
+</html>

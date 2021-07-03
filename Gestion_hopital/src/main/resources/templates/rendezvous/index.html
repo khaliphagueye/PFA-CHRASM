@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Liste des RV</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class="container text-center">
+		<div class="row mt-5 rounded mx-3 p-5">
+			<div class=" col-12  shadow py-3 rounded-start">
+				<h1 th:text="${info}" class="alert alert-primary container fs-3"></h1>
+
+				<form th:action="@{/patient/save}" method="post"
+					th:object="${patient}">
+					<div class="row">
+
+						<div class="col-md-4 form-group my-2">
+							<input class="form-control" type="hidden" th:field="*{id}"
+								placeholder="id" name="id" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" class="form-control" th:field="*{nom}"
+								placeholder="Nom" name="nom" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" class="form-control" th:field="*{prenom}"
+								placeholder="Prenom" name="prenom" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" class="form-control" th:field="*{email}"
+								placeholder="Email" name="email" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" class="form-control"
+								th:field="*{groupeSanguin}" placeholder="groupe sanguin"
+								name="groupeSanguin" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" class="form-control" th:field="*{adresse}"
+								placeholder="Adresse" name="adresse" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" th:field="*{maladie}" class="form-control"
+								placeholder="Maladie" name="maladie" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<input type="text" th:field="*{telephone}" class="form-control"
+								placeholder="Téléphone" name="telephone" required />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<select name="rendezvous" multiple="multiple"
+								class="form-control">
+								<option th:each="r : ${rendezvous}" th:text="${a.date}"
+									th:value="${a.id}" th:selected="${a.patient.id==patient.id}"></option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group my-2">
+							<button class="btn btn-primary btn-lg float-left">valider</button>
+						</div>
+					</div>
+
+				</form>
+
+
+			</div>
+			<div>
+				<img class="img-fluid rounded-end" th:src="@{../../img/img1.png}"
+					alt="inscrire" />
+			</div>
+		</div>
+
+		<h1 th:text="${titre}" class="alert alert-primary container fs-3"></h1>
+		<div class="col-md-5 form-group my-3 offset-md-7">
+			<form th:action="@{/patient/recherche/{id}}" method="GET">
+				<input class="form-control me-8" type="search"  name="id"
+					placeholder="Entrez l'Id du patient" aria-label="Search" > <br>
+				<div class="offset-md-10">
+					<a th:href="@{/patient/recherche/{id}(id=${patient.id})}"
+						class="btn btn-sm btn-success">Recherche</a>
+				</div>
+			</form>
+		</div>
+		<table class="table table-bordered container ">
+		
+			<thead class="p-3 mb-2 bg-primary text-white">
+				<tr>
+					<th scope="col">id</th>
+					<th scope="col">Nom</th>
+					<th scope="col">Prenom</th>
+					<th scope="col">E-mail</th>
+					<th scope="col">Maladie</th>
+					<th scope="col">Groupe sanguin</th>
+					<th scope="col">Adresse</th>
+					<th scope="col">Téléphone</th>
+					<th scope="col" >Date de rendez vous</th>
+					<th scope="col">Département</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="p : ${patients}">
+					<th th:text="${p.id}"></th>
+					<td th:text="${p.nom}"></td>
+					<td th:text="${p.prenom}"></td>
+					<td th:text="${p.email}"></td>
+					<td th:text="${p.maladie}"></td>
+					<td th:text="${p.groupeSanguin}"></td>
+					<td th:text="${p.adresse}"></td>
+					<td th:text="${p.telephone}"></td>
+					
+					<td  th:text="${p.date}"></td>
+					<td th:text="${p.department}"></td>
+
+					<!--  <th>
+      <div th:each="c : ${p.rendezvous}">     <span  th:text="${c.rendezvous.sr}"></span>
+      <span th:text="${c.qte}"></span>
+      </div>
+ 
+      </th>  
+      <td>
+      
+      <div class="badge bg-primary" th:each="a : ${p.accessoires}" th:text="${a.nom}"></div>
+       </td>-->
+					<td><a href="" onclick="return confirm('Supprimer?')"
+						th:href="@{/patient/delete/{id}(id=${p.id})}"
+						class="btn btn-sm btn-danger">Supprimer</a> <a
+						onclick="return confirm('Editer?')"
+						th:href="@{/patient/edit/{id}(id=${p.id})}"
+						class="btn btn-sm btn-warning">Modifier</a></td>
+				</tr>
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
